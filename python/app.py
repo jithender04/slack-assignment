@@ -1,10 +1,13 @@
 from flask import Flask, request, jsonify, current_app
+from dotenv import load_dotenv
 from pymongo import MongoClient
 from datetime import datetime
 from bson.objectid import ObjectId
 import jwt
 import os
 import bcrypt
+
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -115,4 +118,4 @@ def delete_task(task_id):
     return jsonify({'message': 'Task not found'}), 404
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=8080)
