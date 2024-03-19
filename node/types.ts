@@ -4,7 +4,7 @@ export interface customRequest extends Request {
     userId?: string;
 }
 export interface taskRequestBody {
-    title: string, description?: string, status: string, dueDate?: string
+    title: string, description?: string, status: string, dueDate?: string, assignee?: string
 }
 export interface userRequestBody {
     username: string, password: string

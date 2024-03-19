@@ -5,6 +5,11 @@ const TaskSchema = new mongoose.Schema(
       type: String,
       required: true
     },
+    assignee: {
+      type: String,
+      required: false,
+      default: 'unassigned'
+    },
     description: {
       type: String,
       required: false
